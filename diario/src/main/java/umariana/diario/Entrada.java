@@ -31,7 +31,7 @@ public class Entrada {
 
     }
 
-    // Getters and setters
+   
     public int getIdEntrada() {
         return idEntrada;
     }
@@ -109,7 +109,7 @@ public class Entrada {
 
         System.out.println("nueva entrada es " + nuevoIdEntrada);
 
-        System.out.println("Ingrese una descripción:");
+        System.out.println("Ingrese una descripcion:");
         sc.nextLine(); 
         String descripcion = sc.nextLine();
 
@@ -166,7 +166,7 @@ public class Entrada {
         System.out.println("Ingrese la nueva descripcion:");
         String nuevaDescripcion = sc.nextLine();
         entradaModificada.setDescripcion(nuevaDescripcion);
-        System.out.println("Descripción actualizada");
+        System.out.println("actualizada");
     } else {
         System.out.println(" no hay ninguna entrada con el id ingresado");
     }
