@@ -107,7 +107,7 @@ public class Entrada {
             nuevoIdEntrada = ultimaEntrada.getIdEntrada() + 1;
         }
 
-        System.out.println("nueva entrada es " + nuevoIdEntrada);
+        System.out.println("nueva entrada con id:  " + nuevoIdEntrada);
 
         System.out.println("Ingrese una descripcion:");
         sc.nextLine(); 
