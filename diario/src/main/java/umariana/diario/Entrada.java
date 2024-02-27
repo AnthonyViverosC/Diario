@@ -151,7 +151,7 @@ public class Entrada {
     public void modificarEntrada() {
     System.out.println("Digite el id de la entrada que desea modificar:");
     int id = sc.nextInt();
-    sc.nextLine(); // Limpiar el buffer
+    sc.nextLine(); 
 
     Entrada entradaModificada = null;
 
