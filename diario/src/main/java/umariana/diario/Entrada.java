@@ -133,18 +133,21 @@ public class Entrada {
         }
     }
 
-    public void eliminarEntrada() {
+  public void eliminarEntrada() {
         System.out.println(" Digite el id de la entrada que quiere  eliminar");
         int id = sc.nextInt();
         Iterator<Entrada> it = misEntradas.iterator();
 
         while (it.hasNext()) {
             Entrada e = it.next();
-            if (e.getIdEntrada() != id) {
+            if (e.getIdEntrada() == id) {
+                  it.remove();
+                System.out.println("Entrada con id " + id + " ha sido eliminada");
             } else {
-                it.remove();
+                System.out.println("no existe id");
+              
             }
-            System.out.println("Entrada con id " + id + " ha sido eliminada");
+            
         }
     }
 
