@@ -149,23 +149,26 @@ public class Entrada {
     }
 
     public void modificarEntrada() {
+    System.out.println("Digite el id de la entrada que desea modificar:");
+    int id = sc.nextInt();
+    sc.nextLine(); // Limpiar el buffer
 
-        System.out.println("Digite el id de la entrada que desea modificar:");
-        int id = sc.nextInt();
-        sc.nextLine(); // Limpiar el buffer
+    Entrada entradaModificada = null;
 
-        for (Entrada entrada : misEntradas) {
-            if (entrada.getIdEntrada() == id) {
-                System.out.println("Ingrese la nueva descripcion:");
-                String nuevaDescripcion = sc.nextLine();
-                entrada.setDescripcion(nuevaDescripcion);
-                System.out.println("Descripción actualizada");
-                break;
-            }
-        }
-
-        if (misEntradas.size() == 0) {
-            System.out.println(" no hay ninguna entrada con el id ingresado");
+    for (Entrada entrada : misEntradas) {
+        if (entrada.getIdEntrada() == id) {
+            entradaModificada = entrada;
+            break;
         }
     }
+
+    if (entradaModificada != null) {
+        System.out.println("Ingrese la nueva descripcion:");
+        String nuevaDescripcion = sc.nextLine();
+        entradaModificada.setDescripcion(nuevaDescripcion);
+        System.out.println("Descripción actualizada");
+    } else {
+        System.out.println(" no hay ninguna entrada con el id ingresado");
+    }
+}
 }
